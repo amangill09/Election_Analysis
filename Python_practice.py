@@ -156,10 +156,6 @@ for i in Code_editor_dict['Python']: # assigns values from list assigned to key 
     print(i)
 
 
-test = {}
-test['a']=0
-test['a']+=1
-
 
 a = "Hello World"
 
