@@ -1,3 +1,78 @@
+#hello world
+
+from operator import index
+
+
+print("hello world")
+
+# lists
+
+# Declare empty list
+my_list = []
+
+# add values to list
+my_list.append("zero") ## append only adds to the end of list. No way to give an index value here 
+my_list.append("one") 
+my_list+="two" # same as append but breaksdown the string
+my_list+=["two"] # same as append
+my_list[2]+="two" # this will append to value at index 2
+
+
+my_list.insert(2,"two")## insert will add whereever the index points to
+my_list.insert(-1,"three") # -1 will insert before index -1 i.e. second last position
+
+# remove from list
+my_list.pop() # uses index. blank removes last
+my_list.pop(0) # removes first position
+my_list.remove("one") # uses value. cannot be blank
+
+#diff data type lists
+diff = ["cake",2,["paper","write","2022/01/01"]]
+
+#2D lists - list os lists
+list_of_lists = [[1,'a'],['b',2]]
+
+#retreiving data from list
+my_list[0] #using index
+my_list[-1]
+my_list[1:3]
+list_of_lists[1][0] #2d list have two indexes
+
+first, *middle, last = my_list
+print(first,middle,last)
+
+my_list.index("one") # retrieve index for an element
+
+# performing operations on lists
+my_list[-1] = "new value" # updates last index value
+sorted(my_list) # sorted just outputs the sorted list. does not modify original list
+my_list.sort() # sort func takes no arguments. modifies original list
+my_list.reverse() #reverses list
+my_list = my_list + ["two","one"] # add lists
+
+a = [0]
+a = a*100 # hundred zeroes in a list
+
+a = [*range(5)] # creates list with output of range(5)
+
+# loops
+for val in my_list: # value will get each value assigned to it. no need of indexes
+    print(val)
+for indx in range(len(my_list)): # get list using an index
+    print(indx,my_list[indx])
+for i,x in enumerate(my_list,0): # enumerate gives index and value in a tuple
+    print(i,x)
+
+[print(x) for x in my_list] # list comprehension to iterate through a list
+
+#other
+my_list.count("one") # count takes values
+len(my_list)  #len function returns # of elements in a list
+
+
+
+
+
 a = list()
 type(a)
 
@@ -23,7 +98,85 @@ len(counties_tuple)
 
 counties_tuple[:2]
 
+
+
 # Dictionaries
+my_d = {}
+
+# Create and add elements
+my_d = {1:'Navin',2:'Kiran',4:"Harsh"}
+
+keys = ['Navin','Kiran',"Harsh"]
+values = ['Python','Java',"JS"]
+DictFromLists = dict(zip(keys,values)) # create a dict from lists 
+DictFromLists['Monika'] = 'CS' # add a new key and value by directly assigning value to a key
+DictFromLists.update({'Kiran':'C#'}) # use update func with argument = dictionary with updates 
+Code_editor_dict = {'JS':'Atom','CS':'VS','Python':['Pychar','Sublime'],'Java':{'JSE':'Netbeans','JEE':'Eclipse'}}
+Code_editor_dict['Python'].append("appended1") # appends to the list in dictionary - after last position
+Code_editor_dict['Python'].append(5) # appends integer 5 to the list in dictionary - after last position
+Code_editor_dict['Python']+=("_appendedagain") # appends to the list in dictionary - after last position but breaks down the string
+Code_editor_dict['Python']+=(["_appendedagain"]) # appends this list to the exisitng list in dictionary - after last position 
+Code_editor_dict['Python'][3]+=("_appendedagain") # appends to the index postion - adds strings to existing string
+
+# remove elements
+del DictFromLists['Harsh'] # del based on key. Original Dict gets updated.
+DictFromLists.pop('Monika') # pop based on key. Original Dict gets updated.
+Pop_value = DictFromLists.pop('Monika') # We can also assign popped value to a variable
+
+# 2D Dictionary
+Code_editor_dict = {'JS':'Atom','CS':'VS','Python':['Pychar','Sublime'],'Java':{'JSE':'Netbeans','JEE':'Eclipse'}}
+Code_editor_dict['JS'] # acceess element with value type = STR
+Code_editor_dict['Python'][0] # acceess element with value type = List
+Code_editor_dict['Java']['JSE'] # acceess element with value type = Dict. THe second argument should be equal to a key
+
+# access elements
+my_d[1] # use the Rectangular (list) bracket to retrieve value based on Key. Notice no "" since key is an integer (1)
+DictFromLists["Harsh"]
+my_d[3] # error since 3 is not a key
+my_d.get(4) # use brackets not rect brackets
+my_d.get(3) # no error but blank
+my_d.get(3,'Not Found') # display message if blank
+
+my_d.items() # same as my_d i.e. name of dict
+my_d.keys() # gives the keys , takes no arguments
+my_d.values() # gives values, takes no arguments
+
+len(my_d) # number of keys
+
+# looping
+for i in Code_editor_dict: # assigns keys to i
+    print(i)
+for i in Code_editor_dict.keys(): # assigns keys to i, same without .keys(). takes no argument
+    print(i)
+for i in Code_editor_dict.values(): # assigns values to i, takes no argument
+    print(i)
+for i,j in Code_editor_dict.items(): # assigns keys and values to i. This is only way to get both. takes no argument
+    print(i,j)
+for i in Code_editor_dict['Python']: # assigns values from list assigned to key python to i, takes no argument
+    print(i)
+
+
+test = {}
+test['a']=0
+test['a']+=1
+
+
+a = "Hello World"
+
+list(a)
+set(a)
+
+# perform operations on dictionaries
+test_dict = {'gfg' : 6, 'is' : 4, 'best' : 7}
+for key in test_dict:    # arithmetic operation on a value
+    test_dict[key] *= 3
+
+Code_editor_dict["Python"] += ['VS'] # add to a 'list' value in dictionary
+
+# other
+
+
+
 
 my_dictionary = dict()
 
