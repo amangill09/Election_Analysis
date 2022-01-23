@@ -23,7 +23,7 @@ The analysis of the election show that:
     - Charles Casper Stockham
     - Diana DeGette
     - Raymon Anthony Doane
--The candidate results were:
+- The candidate results were:
     - Charles Casper Stockham received 23.0% of vote and 85,213 number of votes.
     - Diana DeGette received 73.8% of vote and 272,892 number of votes.
     - Raymon Anthony Doane received 3.1% of vote and 11,606 number of votes.
@@ -54,9 +54,9 @@ The analysis of election by county show us that:
     - Denver county, that received 82.8% of votes and a total of 306,055 votes.
 
 ## Election Audit Summary
-This python code showed us how to get results for small data set which includes ballot number, candidate name and location. We were able to find who won, by what percentage and which county got most votes. This code can be modified and used for any election and here here two examples:
-- There dataset can include more voter information like gender and we can analyze what the vote distribution looks like. In the for loop we will add another counter to determine if the vote if male, female or other. Then we can use those counts to determine vote percent by gender. 
-- For the same data set we can determine votes for each candidate by county. We can add another dictionary in the candidate_votes which captures each county as key and total votes as a value. We will use an if loop to capture the county names just like we did for candidates.
+This python code showed us how to get results for small data set which includes ballot number, candidate name and location. We were able to find who won, by what percentage and which county got most votes. This code can be modified and used for any election and here are two examples:
+- The dataset can include more voter information like gender and we can analyze what the vote distribution looks like. In the for loop we will add another counter to determine if the vote was male, female or other. Then we can use those counts to determine candidate's vote percent by gender. 
+- For the same data set we can determine votes for each candidate by county. We can add a key value pair that is a dictionary in candidate_votes which captures each county as key and total votes as a value. We will use an if loop to capture the county names just like we did for candidates.
 
 ## GitHUB Links
 - [Python Challenge Code](PyPoll_Challenge.py)    
